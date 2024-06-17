@@ -392,3 +392,30 @@ class MainPage(BasePage):
         click_footer_widgets.click()
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_our_technology(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,6000)")
+        time.sleep(2)
+        click_footer_our_technology = self.browser.find_element(*MainPageLocators.footer_our_technology)
+        click_footer_our_technology.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_weather_data(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,6000)")
+        time.sleep(2)
+        click_footer_weather_data = self.browser.find_element(*MainPageLocators.footer_weather_data)
+        click_footer_weather_data.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_weather_stations(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,6000)")
+        time.sleep(2)
+        click_footer_weather_stations = self.browser.find_element(*MainPageLocators.footer_weather_station)
+        click_footer_weather_stations.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)

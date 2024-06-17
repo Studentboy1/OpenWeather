@@ -50,3 +50,6 @@ class MainPageLocators():
     footer_map = (By.XPATH, "//div[@class='footer-section']//a[@href='/api#maps']")
     footer_dash = (By.XPATH, "//div[@class='footer-section']//a[@href='/weather-dashboard']")
     footer_widgets = (By.XPATH, "//div[@class='footer-section']//a[@href='/widgets-constructor']")
+    footer_our_technology = (By.XPATH, "//div[@class='footer-section']//a[@href='/technology']")
+    footer_weather_data = (By.XPATH, "//div[@class='footer-section']//a[@href='/accuracy-and-quality']")
+    footer_weather_station = (By.XPATH, "//div[@class='footer-section']//a[@href='/stations']")

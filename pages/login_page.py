@@ -665,3 +665,51 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+# Our technology(Footer)
+
+    def get_click_footer_our_technology_page(self):
+        self.get_click_footer_our_technology()
+
+    def get_click_footer_our_technology(self):
+        assert MainPageLocators.footer_our_technology.is_displayed(), "The footer Our technology page is present"
+
+    def test_current_url_footer_our_technology(self):
+        try:
+            assert "https://openweathermap.org/technology" in self.url == 'https://openweathermap.org/technology'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+# Accuracy and quality of weather data(Footer)
+
+    def get_click_footer_weather_data_page(self):
+        self.get_click_footer_weather_data()
+
+    def get_click_footer_weather_data(self):
+        assert MainPageLocators.footer_weather_data.is_displayed(), "The footer Accuracy and quality of weather data page is present"
+
+    def test_current_url_footer_weather_data(self):
+        try:
+            assert "https://openweathermap.org/accuracy-and-quality" in self.url == 'https://openweathermap.org/accuracy-and-quality'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+# Connect your weather station(Footer)
+
+    def get_click_footer_weather_stations_page(self):
+        self.get_click_footer_weather_stations()
+
+    def get_click_footer_weather_stations(self):
+        assert MainPageLocators.footer_weather_station.is_displayed(), "The footer Accuracy and quality of weather data page is present"
+
+    def test_current_url_footer_weather_stations(self):
+        try:
+            assert "https://openweathermap.org/stations" in self.url == 'https://openweathermap.org/stations'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
