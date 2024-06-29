@@ -713,3 +713,50 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#Pricing(Footer)
+    def get_click_footer_pricing_page(self):
+        self.get_click_footer_pricing()
+
+    def get_click_footer_pricing(self):
+        assert MainPageLocators.footer_price.is_displayed(), "The footer Pricing page is present"
+
+    def test_current_url_footer_pricing(self):
+        try:
+            assert "https://openweathermap.org/price" in self.url == 'https://openweathermap.org/price'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#How to start (Footer)
+    def get_click_footer_start_page(self):
+        self.get_click_footer_start()
+
+    def get_click_footer_start(self):
+        assert MainPageLocators.footer_how_to_start.is_displayed(), "The footer How to Start page is present"
+
+    def test_current_url_footer_start(self):
+        try:
+            assert "https://openweathermap.org/appid" in self.url == 'https://openweathermap.org/appid'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+# Subscribe (Footer)
+    def get_click_footer_subscribe_page(self):
+        self.get_click_footer_subscribe()
+
+    def get_click_footer_subscribe(self):
+        assert MainPageLocators.footer_subscribe.is_displayed(), "The footer Subscribe page is present"
+
+    def test_current_url_footer_subscribe(self):
+        try:
+            assert "https://home.openweathermap.org/users/sign_up" in self.url == 'https://home.openweathermap.org/users/sign_up'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+

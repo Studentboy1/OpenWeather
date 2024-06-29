@@ -53,3 +53,6 @@ class MainPageLocators():
     footer_our_technology = (By.XPATH, "//div[@class='footer-section']//a[@href='/technology']")
     footer_weather_data = (By.XPATH, "//div[@class='footer-section']//a[@href='/accuracy-and-quality']")
     footer_weather_station = (By.XPATH, "//div[@class='footer-section']//a[@href='/stations']")
+    footer_price = (By.XPATH, "//div[@class='footer-section']//a[@href='/price']")
+    footer_how_to_start = (By.XPATH, "//div[@class='footer-section']//a[@href='/appid']")
+    footer_subscribe = (By.XPATH, "//div[@class='footer-section']//a[@href='https://home.openweathermap.org/users/sign_up']")

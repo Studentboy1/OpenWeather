@@ -419,3 +419,30 @@ class MainPage(BasePage):
         click_footer_weather_stations.click()
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_price(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,5500)")
+        time.sleep(2)
+        click_footer_price = self.browser.find_element(*MainPageLocators.footer_price)
+        click_footer_price.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_how_to_start(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,5500)")
+        time.sleep(2)
+        click_footer_start = self.browser.find_element(*MainPageLocators.footer_how_to_start)
+        click_footer_start.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_subscribe(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,5500)")
+        time.sleep(2)
+        click_footer_subscribe = self.browser.find_element(*MainPageLocators.footer_subscribe)
+        click_footer_subscribe.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
