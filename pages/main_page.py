@@ -446,3 +446,81 @@ class MainPage(BasePage):
         click_footer_subscribe.click()
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_terms(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,6000)")
+        time.sleep(2)
+        click_footer_terms = self.browser.find_element(*MainPageLocators.footer_terms)
+        click_footer_terms.click()
+        time.sleep(2)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_privacy(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,6000)")
+        time.sleep(2)
+        click_footer_privacy = self.browser.find_element(*MainPageLocators.footer_privacy)
+        click_footer_privacy.click()
+        time.sleep(2)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_website(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,6000)")
+        time.sleep(2)
+        click_footer_website = self.browser.find_element(*MainPageLocators.footer_website)
+        click_footer_website.click()
+        time.sleep(2)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_about_us(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,6000)")
+        time.sleep(2)
+        click_footer_about_us = self.browser.find_element(*MainPageLocators.footer_about_us)
+        click_footer_about_us.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_blog(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,6000)")
+        time.sleep(2)
+        click_footer_blog = self.browser.find_element(*MainPageLocators.footer_blog)
+        click_footer_blog.click()
+        time.sleep(2)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_for_business(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,6000)")
+        time.sleep(2)
+        click_footer_for_business = self.browser.find_element(*MainPageLocators.footer_for_business)
+        click_footer_for_business.click()
+        time.sleep(2)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_chat_bot(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,6000)")
+        time.sleep(2)
+        click_footer_chat_bot = self.browser.find_element(*MainPageLocators.footer_chat_bot)
+        click_footer_chat_bot.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_footer_ask_questions(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,6000)")
+        time.sleep(2)
+        click_footer_ask_questions = self.browser.find_element(*MainPageLocators.footer_ask_questions)
+        click_footer_ask_questions.click()
+        time.sleep(2)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)

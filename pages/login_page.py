@@ -759,4 +759,123 @@ class LoginPage(BasePage):
         else:
             print("URL соответствует ожидаемому")
 
+# Terms (Footer)
+    def get_click_footer_terms_page(self):
+        self.get_click_footer_terms()
+
+    def get_click_footer_terms(self):
+        assert MainPageLocators.footer_terms.is_displayed(), "The footer Terms page is present"
+
+    def test_current_url_footer_terms(self):
+        try:
+            assert "https://openweather.co.uk/storage/app/media/Terms/Openweather_terms_and_conditions_of_sale.pdf" in self.url == 'https://openweather.co.uk/storage/app/media/Terms/Openweather_terms_and_conditions_of_sale.pdf'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#Privacy Policy (Footer)
+    def get_click_footer_privacy_page(self):
+        self.get_click_footer_privacy()
+
+    def get_click_footer_privacy(self):
+        assert MainPageLocators.footer_privacy.is_displayed(), "The footer Privacy page is present"
+
+    def test_current_url_footer_privacy(self):
+        try:
+            assert "https://openweather.co.uk/privacy-policy" in self.url == 'https://openweather.co.uk/privacy-policy'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+# Website terms and conditions (Footer)
+    def get_click_footer_website_page(self):
+        self.get_click_footer_website()
+
+    def get_click_footer_website(self):
+        assert MainPageLocators.footer_website.is_displayed(), "The footer Website page is present"
+
+    def test_current_url_footer_website(self):
+        try:
+            assert "https://openweather.co.uk/storage/app/media/Terms/Openweather_website_terms_and_conditions_of_use.pdf" in self.url == 'https://openweather.co.uk/storage/app/media/Terms/Openweather_website_terms_and_conditions_of_use.pdf'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+# About Us (Footer)
+    def get_click_footer_about_us_page(self):
+        self.get_click_footer_about_us()
+
+    def get_click_footer_about_us(self):
+        assert MainPageLocators.footer_about_us.is_displayed(), "The footer About Us page is present"
+
+    def test_current_url_footer_about_us(self):
+        try:
+            assert "https://openweather.co.uk/about" in self.url == 'https://openweather.co.uk/about'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+# Blog (Footer)
+    def get_click_footer_blog_page(self):
+        self.get_click_footer_blog()
+
+    def get_click_footer_blog(self):
+        assert MainPageLocators.footer_about_us.is_displayed(), "The footer Blog page is present"
+
+    def test_current_url_footer_blog(self):
+        try:
+            assert "https://openweather.co.uk/blog/category/weather" in self.url == 'https://openweather.co.uk/blog/category/weather'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+# For Business (Footer)
+    def get_click_footer_for_business_page(self):
+        self.get_click_footer_for_business()
+
+    def get_click_footer_for_business(self):
+        assert MainPageLocators.footer_about_us.is_displayed(), "The footer For Business page is present"
+
+    def test_current_url_footer_for_business(self):
+        try:
+            assert "https://openweather.co.uk/" in self.url == 'https://openweather.co.uk/'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+# Chat Bot (Footer)
+    def get_click_footer_chat_bot_page(self):
+        self.get_click_footer_chat_bot()
+
+    def get_click_footer_chat_bot(self):
+        assert MainPageLocators.footer_about_us.is_displayed(), "The footer Chat Bot page is present"
+
+    def test_current_url_footer_chat_bot(self):
+        try:
+            assert "https://openweathermap.org/chat" in self.url == 'https://openweathermap.org/chat'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+# Ask questions (Footer)
+    def get_click_footer_ask_questions_page(self):
+        self.get_click_footer_ask_questions()
+
+    def get_click_footer_ask_questions(self):
+        assert MainPageLocators.footer_about_us.is_displayed(), "The footer Ask Questions page is present"
+
+    def test_current_url_footer_ask_questions(self):
+        try:
+            assert "https://home.openweathermap.org/questions" in self.url == 'https://home.openweathermap.org/questions'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
 
