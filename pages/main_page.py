@@ -524,3 +524,49 @@ class MainPage(BasePage):
         time.sleep(2)
         self.browser.switch_to.window(self.browser.window_handles[-1])
         return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_hourly_weather_data(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,2200)")
+        time.sleep(2)
+        click_hourly_weather_data = self.browser.find_element(*MainPageLocators.hourly_weather_data)
+        click_hourly_weather_data.click()
+        time.sleep(2)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_daily_weather_data(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,2200)")
+        time.sleep(2)
+        click_daily_weather_data = self.browser.find_element(*MainPageLocators.daily_weather_data)
+        click_daily_weather_data.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_month_weather_data(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,2200)")
+        time.sleep(2)
+        click_month_weather_data = self.browser.find_element(*MainPageLocators.month_weather_data)
+        click_month_weather_data.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_historical_weather_data(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,2200)")
+        time.sleep(2)
+        click_historical_weather_data = self.browser.find_element(*MainPageLocators.historical_weather_data)
+        click_historical_weather_data.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_minute_forecast(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,2200)")
+        time.sleep(2)
+        click_minute_forecast = self.browser.find_element(*MainPageLocators.minute_forecast)
+        click_minute_forecast.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)

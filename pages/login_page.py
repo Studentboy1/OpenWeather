@@ -879,3 +879,77 @@ class LoginPage(BasePage):
         else:
             print("URL соответствует ожидаемому")
 
+# Hourly (4 days)
+    def get_click_hourly_weather_data_page(self):
+        self.get_click_hourly_weather_data()
+
+    def get_click_hourly_weather_data(self):
+        assert MainPageLocators.hourly_weather_data.is_displayed(), "The Hourly page is present"
+
+    def test_current_url_hourly_weather_data(self):
+        try:
+            assert "https://openweathermap.org/api/hourly-forecast" in self.url == 'https://openweathermap.org/api/hourly-forecast'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+# Daily (16 days)
+    def get_click_daily_weather_data_page(self):
+        self.get_click_daily_weather_data()
+
+    def get_click_daily_weather_data(self):
+        assert MainPageLocators.daily_weather_data.is_displayed(), "The Daily page is present"
+
+    def test_current_url_daily_weather_data(self):
+        try:
+            assert "https://openweathermap.org/forecast16" in self.url == 'https://openweathermap.org/forecast16'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+# Month (30 days)
+    def get_click_month_weather_data_page(self):
+        self.get_click_month_weather_data()
+
+    def get_click_month_weather_data(self):
+        assert MainPageLocators.month_weather_data.is_displayed(), "The Month page is present"
+
+    def test_current_url_month_weather_data(self):
+        try:
+            assert "https://openweathermap.org/api/forecast30" in self.url == 'https://openweathermap.org/api/forecast30'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+# Historical Bulk
+    def get_click_historical_weather_data_page(self):
+        self.get_click_historical_weather_data()
+
+    def get_click_historical_weather_data(self):
+        assert MainPageLocators.historical_weather_data.is_displayed(), "The Historical Bulk page is present"
+
+    def test_current_url_historical_weather_data(self):
+        try:
+            assert "https://openweathermap.org/history-bulk" in self.url == 'https://openweathermap.org/history-bulk'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+# Minute-by-minute forecast
+    def get_click_minute_forecast_page(self):
+        self.get_click_minute_forecast()
+
+    def get_click_minute_forecast(self):
+        assert MainPageLocators.minute_forecast.is_displayed(), "The Minute Forecast page is present"
+
+    def test_current_url_minute_forecast(self):
+        try:
+            assert "https://openweathermap.org/api/one-call-3" in self.url == 'https://openweathermap.org/api/one-call-3'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
