@@ -953,3 +953,19 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#AI_Bot
+    def get_click_ai_bot_page(self):
+        self.get_ai_bot()
+
+    def get_click_ai_bot(self):
+        assert MainPageLocators.ai_bot.is_displayed(), "The AI Bot page is present"
+
+    def test_current_url_ai_bot(self):
+        try:
+            assert "https://openweathermap.org/support-centre" in self.url == 'https://openweathermap.org/support-centre'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+

@@ -69,3 +69,4 @@ class MainPageLocators():
     month_weather_data = (By.XPATH,"//div[@class='section-content grid-container grid-1-1 grid-reverse mobile-padding']//a[@href='/api/forecast30']")
     historical_weather_data = (By.XPATH,"//div[@class='section-content grid-container grid-1-1 grid-reverse mobile-padding']//a[@href='/history-bulk']")
     minute_forecast = (By.XPATH,"//div[@class='section-content grid-container grid-1-1 grid-reverse mobile-padding']//a[@href='/api/one-call-3']")
+    ai_bot = (By.XPATH, "//div[@id='chat-banner']//a[@class='ow-btn round btn-orange text-center']")

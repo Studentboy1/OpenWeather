@@ -570,3 +570,11 @@ class MainPage(BasePage):
         click_minute_forecast.click()
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_ai_bot(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        click_ai_bot = self.browser.find_element(*MainPageLocators.ai_bot)
+        click_ai_bot.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
