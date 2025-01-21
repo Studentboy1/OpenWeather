@@ -578,3 +578,12 @@ class MainPage(BasePage):
         click_ai_bot.click()
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_view_solutions(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,1500)")
+        time.sleep(2)
+        click_view_solutions = self.browser.find_element(*MainPageLocators.view_solutions)
+        click_view_solutions.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)

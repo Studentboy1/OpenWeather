@@ -969,3 +969,18 @@ class LoginPage(BasePage):
         else:
             print("URL соответствует ожидаемому")
 
+#view_solutions
+    def get_click_view_solutions_page(self):
+        self.get_view_solutions()
+
+    def get_click_view_solutions(self):
+        assert MainPageLocators.view_solutions.is_displayed(), "The View solutions page is present"
+
+    def test_current_url_view_solutions(self):
+        try:
+            assert "https://openweathermap.org/examples" in self.url == 'https://openweathermap.org/examples'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
