@@ -71,3 +71,6 @@ class MainPageLocators():
     minute_forecast = (By.XPATH,"//div[@class='section-content grid-container grid-1-1 grid-reverse mobile-padding']//a[@href='/api/one-call-3']")
     ai_bot = (By.XPATH, "//div[@id='chat-banner']//a[@class='ow-btn round btn-orange text-center']")
     view_solutions = (By.XPATH,"//div[@class='section-content grid-container grid-1-1 mobile-padding']//a[@href='/examples']")
+    read_more = (By.XPATH,"//div[@class='section-content grid-container grid-1-1 mobile-padding']//a[@href='/examples#google1']")
+    connect = (By.XPATH,"//div[@class='section-content grid-container grid-1-1 mobile-padding']//a[@href='/stations']")
+    contact_us = (By.XPATH,"//div[@class='section-content grid-container grid-1-1 mobile-padding']//a[@href='mailto:info@openweathermap.org']")

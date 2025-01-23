@@ -587,3 +587,30 @@ class MainPage(BasePage):
         click_view_solutions.click()
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_read_more(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,1500)")
+        time.sleep(2)
+        click_read_more = self.browser.find_element(*MainPageLocators.read_more)
+        click_read_more.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_connect(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,1500)")
+        time.sleep(2)
+        click_connect = self.browser.find_element(*MainPageLocators.connect)
+        click_connect.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_contact_us(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,1500)")
+        time.sleep(2)
+        click_contact_us = self.browser.find_element(*MainPageLocators.contact_us)
+        click_contact_us.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)

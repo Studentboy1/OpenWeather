@@ -956,7 +956,7 @@ class LoginPage(BasePage):
 
 #AI_Bot
     def get_click_ai_bot_page(self):
-        self.get_ai_bot()
+        self.get_click_ai_bot()
 
     def get_click_ai_bot(self):
         assert MainPageLocators.ai_bot.is_displayed(), "The AI Bot page is present"
@@ -971,7 +971,7 @@ class LoginPage(BasePage):
 
 #view_solutions
     def get_click_view_solutions_page(self):
-        self.get_view_solutions()
+        self.get_click_view_solutions()
 
     def get_click_view_solutions(self):
         assert MainPageLocators.view_solutions.is_displayed(), "The View solutions page is present"
@@ -979,6 +979,51 @@ class LoginPage(BasePage):
     def test_current_url_view_solutions(self):
         try:
             assert "https://openweathermap.org/examples" in self.url == 'https://openweathermap.org/examples'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#read_more
+    def get_click_read_more_page(self):
+        self.get_click_read_more()
+
+    def get_click_read_more(self):
+        assert MainPageLocators.read_more.is_displayed(), "The Read more page is present"
+
+    def test_current_url_read_more(self):
+        try:
+            assert "https://openweathermap.org/examples#google1" in self.url == 'https://openweathermap.org/examples#google1'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#connect
+    def get_click_connect_page(self):
+        self.get_click_connect()
+
+    def get_click_connect(self):
+        assert MainPageLocators.connect.is_displayed(), "The Connect page is present"
+
+    def test_current_url_connect(self):
+        try:
+            assert "https://openweathermap.org/stations" in self.url == 'https://openweathermap.org/stations'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#contact_us
+    def get_click_contact_us_page(self):
+        self.get_click_contact_us()
+
+    def get_click_contact_us(self):
+        assert MainPageLocators.contact_us.is_displayed(), "The Contact us page is present"
+
+    def test_current_url_contact_us(self):
+        try:
+            assert "https://openweathermap.org/stations" in self.url == 'https://openweathermap.org/stations'
         except AssertionError:
             print("URL не соответствует ожидаемому")
         else:
