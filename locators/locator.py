@@ -74,3 +74,5 @@ class MainPageLocators():
     read_more = (By.XPATH,"//div[@class='section-content grid-container grid-1-1 mobile-padding']//a[@href='/examples#google1']")
     connect = (By.XPATH,"//div[@class='section-content grid-container grid-1-1 mobile-padding']//a[@href='/stations']")
     contact_us = (By.XPATH,"//div[@class='section-content grid-container grid-1-1 mobile-padding']//a[@href='mailto:info@openweathermap.org']")
+    solar_panel = (By.XPATH,"//div[@class='section']//a[@href='/api/solar-panels-and-energy-prediction']")
+    solar_irradiance = (By.XPATH,"//div[@class='section']//a[@href='/api/solar-energy-prediction']")

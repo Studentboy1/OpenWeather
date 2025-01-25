@@ -614,3 +614,23 @@ class MainPage(BasePage):
         click_contact_us.click()
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_solar_panel(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,1200)")
+        time.sleep(2)
+        click_solar_panel = self.browser.find_element(*MainPageLocators.solar_panel)
+        click_solar_panel.click()
+        time.sleep(2)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_solar_irradiance(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,1200)")
+        time.sleep(2)
+        click_solar_irradiance = self.browser.find_element(*MainPageLocators.solar_irradiance)
+        click_solar_irradiance.click()
+        time.sleep(2)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)

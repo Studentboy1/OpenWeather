@@ -1029,3 +1029,33 @@ class LoginPage(BasePage):
         else:
             print("URL соответствует ожидаемому")
 
+#solar_panel
+    def get_click_solar_panel_page(self):
+        self.get_click_solar_panel()
+
+    def get_click_solar_panel(self):
+        assert MainPageLocators.solar_panel.is_displayed(), "The Solar panel page is present"
+
+    def test_current_url_solar_panel(self):
+        try:
+            assert "https://openweathermap.org/api/solar-panels-and-energy-prediction" in self.url == 'https://openweathermap.org/api/solar-panels-and-energy-prediction'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#solar_irradiance
+    def get_click_solar_irradiance_page(self):
+        self.get_click_solar_irradiance()
+
+    def get_click_solar_irradiance(self):
+        assert MainPageLocators.solar_irradiance.is_displayed(), "The Solar irradiance page is present"
+
+    def test_current_url_solar_irradiance(self):
+        try:
+            assert "https://openweathermap.org/api/solar-energy-prediction" in self.url == 'https://openweathermap.org/api/solar-energy-prediction'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
