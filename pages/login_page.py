@@ -1059,3 +1059,62 @@ class LoginPage(BasePage):
         else:
             print("URL соответствует ожидаемому")
 
+#global_weather
+    def get_click_global_weather_page(self):
+        self.get_click_global_weather()
+
+    def get_click_global_weather(self):
+        assert MainPageLocators.global_weather.is_displayed(), "The Global weather page is present"
+
+    def test_current_url_global_weather(self):
+        try:
+            assert "https://openweathermap.org/api/push-weather-alerts" in self.url == 'https://openweathermap.org/api/push-weather-alerts'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#APIs
+    def get_click_apis_page(self):
+        self.get_click_apis()
+
+    def get_click_apis(self):
+        assert MainPageLocators.apis.is_displayed(), "The APIs page is present"
+
+    def test_current_url_apis(self):
+        try:
+            assert "https://openweathermap.org/current" in self.url == 'https://openweathermap.org/current'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#bulks
+    def get_click_bulks_page(self):
+        self.get_click_bulks()
+
+    def get_click_bulks(self):
+        assert MainPageLocators.bulks.is_displayed(), "The Bulks page is present"
+
+    def test_current_url_bulks(self):
+        try:
+            assert "https://openweathermap.org/bulk" in self.url == 'https://openweathermap.org/bulk'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#api_histories
+    def get_click_apis_histories_page(self):
+        self.get_click_apis_histories()
+
+    def get_click_apis_histories(self):
+        assert MainPageLocators.apis_histories.is_displayed(), "The api history page is present"
+
+    def test_current_url_apis_histories(self):
+        try:
+            assert "https://openweathermap.org/api#history" in self.url == 'https://openweathermap.org/api#history'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")

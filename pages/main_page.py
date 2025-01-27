@@ -617,7 +617,7 @@ class MainPage(BasePage):
 
     def go_to_solar_panel(self):
         self.browser.maximize_window()
-        self.browser.execute_script("window,scrollTo (0,1200)")
+        self.browser.execute_script("window,scrollTo (0,1300)")
         time.sleep(2)
         click_solar_panel = self.browser.find_element(*MainPageLocators.solar_panel)
         click_solar_panel.click()
@@ -627,10 +627,49 @@ class MainPage(BasePage):
 
     def go_to_solar_irradiance(self):
         self.browser.maximize_window()
-        self.browser.execute_script("window,scrollTo (0,1200)")
+        self.browser.execute_script("window,scrollTo (0,1300)")
         time.sleep(2)
         click_solar_irradiance = self.browser.find_element(*MainPageLocators.solar_irradiance)
         click_solar_irradiance.click()
         time.sleep(2)
         self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_global_weather(self):
+        self.browser.maximize_window()
+        self.browser.execute_script("window,scrollTo (0,1300)")
+        time.sleep(2)
+        click_global_weather = self.browser.find_element(*MainPageLocators.global_weather)
+        click_global_weather.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_apis(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,1150)")
+        time.sleep(2)
+        click_apis = self.browser.find_element(*MainPageLocators.apis)
+        click_apis.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_bulks(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,1200)")
+        time.sleep(2)
+        click_bulks = self.browser.find_element(*MainPageLocators.bulks)
+        click_bulks.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_apis_histories(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,1150)")
+        time.sleep(2)
+        click_apis_histories = self.browser.find_element(*MainPageLocators.apis_histories)
+        click_apis_histories.click()
+        time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)

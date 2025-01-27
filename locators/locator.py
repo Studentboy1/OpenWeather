@@ -76,3 +76,7 @@ class MainPageLocators():
     contact_us = (By.XPATH,"//div[@class='section-content grid-container grid-1-1 mobile-padding']//a[@href='mailto:info@openweathermap.org']")
     solar_panel = (By.XPATH,"//div[@class='section']//a[@href='/api/solar-panels-and-energy-prediction']")
     solar_irradiance = (By.XPATH,"//div[@class='section']//a[@href='/api/solar-energy-prediction']")
+    global_weather = (By.XPATH,"//div[@class='section']//a[@href='/api/push-weather-alerts']")
+    apis = (By.XPATH,"//div[@class='section grey-background']//a[@href='/current']")
+    bulks = (By.XPATH,"//div[@class='section grey-background']//a[@href='/bulk']")
+    apis_histories = (By.XPATH,"//div[@class='section']//a[@href='/api#history']")
