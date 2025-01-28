@@ -673,3 +673,24 @@ class MainPage(BasePage):
         click_apis_histories.click()
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_market_zip_codes(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,1150)")
+        time.sleep(2)
+        click_market_zip_codes = self.browser.find_element(*MainPageLocators.market_zip_codes)
+        click_market_zip_codes.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_fly_bulks(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,1150)")
+        time.sleep(2)
+        click_fly_bulks = self.browser.find_element(*MainPageLocators.fly_bulks)
+        click_fly_bulks.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+

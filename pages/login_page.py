@@ -1118,3 +1118,33 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#marketplace (zip codes)
+    def get_click_market_zip_codes_page(self):
+        self.get_click_market_zip_codes()
+
+    def get_click_market_zip_codes(self):
+        assert MainPageLocators.market_zip_codes.is_displayed(), "The marketplace page is present"
+
+    def test_current_url_market_zip_codes(self):
+        try:
+            assert "https://home.openweathermap.org/marketplace" in self.url == 'https://home.openweathermap.org/marketplace'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#on the fly bulks
+    def get_click_fly_bulks_page(self):
+        self.get_click_fly_bulks()
+
+    def get_click_fly_bulks(self):
+        assert MainPageLocators.fly_bulks.is_displayed(), "The on the fly bulks page is present"
+
+    def test_current_url_fly_bulks(self):
+        try:
+            assert "https://home.openweathermap.org/marketplace" in self.url == 'https://home.openweathermap.org/marketplace'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
