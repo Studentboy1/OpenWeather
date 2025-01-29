@@ -82,3 +82,5 @@ class MainPageLocators():
     apis_histories = (By.XPATH,"//div[@class='section']//a[@href='/api#history']")
     market_zip_codes = (By.XPATH,"//div[@class='section']//a[@href='https://home.openweathermap.org/marketplace']")
     fly_bulks = (By.XPATH,"//div[@class='section']//a[@href='https://home.openweathermap.org/marketplace']")
+    one_call_api = (By.XPATH,"//div[@class='section']//a[@href='/api/one-call-3']")
+    professional_collections = (By.XPATH,"//div[@class='section orange-background white-text']//a[@href='/api#pro']")

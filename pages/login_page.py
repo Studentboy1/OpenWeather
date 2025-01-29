@@ -1148,3 +1148,33 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#one_call_api
+    def get_click_one_call_api_page(self):
+        self.get_click_one_call_api()
+
+    def get_click_one_call_api(self):
+        assert MainPageLocators.one_call_api.is_displayed(), "The one call api page is present"
+
+    def test_current_url_one_call_api(self):
+        try:
+            assert "https://openweathermap.org/api/one-call-3" in self.url == 'https://openweathermap.org/api/one-call-3'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#professional_collections
+    def get_click_professional_collections_page(self):
+        self.get_click_professional_collections()
+
+    def get_click_professional_collections(self):
+        assert MainPageLocators.professional_collections.is_displayed(), "The professional collections page is present"
+
+    def test_current_url_professional_collections(self):
+        try:
+            assert "https://openweathermap.org/api#pro" in self.url == 'https://openweathermap.org/api#pro'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
