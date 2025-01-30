@@ -714,3 +714,23 @@ class MainPage(BasePage):
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
 
+    def go_to_how_to_obtain_api(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,1300)")
+        time.sleep(2)
+        click_how_to_obtain_api = self.browser.find_element(*MainPageLocators.how_to_obtain_api)
+        click_how_to_obtain_api.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_how_to_obtain_bulk(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,1300)")
+        time.sleep(2)
+        click_how_to_obtain_bulk = self.browser.find_element(*MainPageLocators.how_to_obtain_bulk)
+        click_how_to_obtain_bulk.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+

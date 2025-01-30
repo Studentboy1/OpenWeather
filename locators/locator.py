@@ -84,3 +84,5 @@ class MainPageLocators():
     fly_bulks = (By.XPATH,"//div[@class='section']//a[@href='https://home.openweathermap.org/marketplace']")
     one_call_api = (By.XPATH,"//div[@class='section']//a[@href='/api/one-call-3']")
     professional_collections = (By.XPATH,"//div[@class='section orange-background white-text']//a[@href='/api#pro']")
+    how_to_obtain_api = (By.XPATH,"//div[@class='text-block orange-side']//a[@href='/api']")
+    how_to_obtain_bulk = (By.XPATH, "//div[@class='text-block orange-side']//a[@href='/bulk']")

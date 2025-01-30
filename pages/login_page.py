@@ -1178,3 +1178,33 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#how_to_obtain_api
+    def get_click_how_to_obtain_api_page(self):
+        self.get_click_how_to_obtain_api()
+
+    def get_click_how_to_obtain_api(self):
+        assert MainPageLocators.how_to_obtain_api.is_displayed(), "The how to obtain api page is present"
+
+    def test_current_url_how_to_obtain_api(self):
+        try:
+            assert "https://openweathermap.org/api" in self.url == 'https://openweathermap.org/api'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#how_to_obtain_bulk
+    def get_click_how_to_obtain_bulk_page(self):
+        self.get_click_how_to_obtain_bulk()
+
+    def get_click_how_to_obtain_bulk(self):
+        assert MainPageLocators.how_to_obtain_bulk.is_displayed(), "The how to obtain bulk page is present"
+
+    def test_current_url_how_to_obtain_bulk(self):
+        try:
+            assert "https://openweathermap.org/bulk" in self.url == 'https://openweathermap.org/bulk'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
