@@ -86,3 +86,7 @@ class MainPageLocators():
     professional_collections = (By.XPATH,"//div[@class='section orange-background white-text']//a[@href='/api#pro']")
     how_to_obtain_api = (By.XPATH,"//div[@class='text-block orange-side']//a[@href='/api']")
     how_to_obtain_bulk = (By.XPATH, "//div[@class='text-block orange-side']//a[@href='/bulk']")
+    agri_analytics = (By.XPATH,"//div[@class='mobile-padding']//a[@href='https://openagro.uk/']")
+    agro_dashboard = (By.XPATH,"//div[@class='text-container']//a[@href='https://home.agromonitoring.com/auth/sign-up']")
+    weather_maps = (By.XPATH,"//div[@class='mobile-padding']//a[@href='/api/weather-map-2']")
+    top_control = (By.XPATH,"//div[@id='topcontrol']//i[@class='fa fa-angle-up backtotop']")

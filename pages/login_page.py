@@ -1208,3 +1208,63 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#agri_analytics
+    def get_click_agri_analytics_page(self):
+        self.get_click_agri_analytics()
+
+    def get_click_agri_analytics(self):
+        assert MainPageLocators.agri_analytics.is_displayed(), "The agri analytics page is present"
+
+    def test_current_url_agri_analytics(self):
+        try:
+            assert "https://openagro.uk/" in self.url == 'https://openagro.uk/'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#agro_dashboard
+    def get_click_agro_dashboard_page(self):
+        self.get_click_agro_dashboard()
+
+    def get_click_agro_dashboard(self):
+        assert MainPageLocators.agro_dashboard.is_displayed(), "The agro dashboard page is present"
+
+    def test_current_url_agro_dashboard(self):
+        try:
+            assert "https://home.agromonitoring.com/auth/sign-up" in self.url == 'https://home.agromonitoring.com/auth/sign-up'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#weather_maps
+    def get_click_weather_maps_page(self):
+        self.get_click_weather_maps()
+
+    def get_click_weather_maps(self):
+        assert MainPageLocators.weather_maps.is_displayed(), "The weather maps page is present"
+
+    def test_current_url_weather_maps(self):
+        try:
+            assert "https://openweathermap.org/api/weather-map-2" in self.url == 'https://openweathermap.org/api/weather-map-2'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#top_control
+    def get_click_top_control_page(self):
+        self.get_click_top_control()
+
+    def get_click_top_control(self):
+        assert MainPageLocators.top_control.is_displayed(), "The top control page is present"
+
+    def test_current_url_top_control(self):
+        try:
+            assert "https://openweathermap.org/" in self.url == 'https://openweathermap.org/'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")

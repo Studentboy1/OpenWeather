@@ -734,3 +734,46 @@ class MainPage(BasePage):
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
 
+    def go_to_agri_analytics(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,2000)")
+        time.sleep(2)
+        click_agri_analytics = self.browser.find_element(*MainPageLocators.agri_analytics)
+        click_agri_analytics.click()
+        time.sleep(2)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_agro_dashboard(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,2000)")
+        time.sleep(2)
+        click_agro_dashboard = self.browser.find_element(*MainPageLocators.agro_dashboard)
+        click_agro_dashboard.click()
+        time.sleep(2)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_weather_maps(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,2100)")
+        time.sleep(2)
+        click_weather_maps = self.browser.find_element(*MainPageLocators.weather_maps)
+        click_weather_maps.click()
+        time.sleep(2)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_top_control(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,2100)")
+        time.sleep(2)
+        click_top_control = self.browser.find_element(*MainPageLocators.top_control)
+        click_top_control.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
