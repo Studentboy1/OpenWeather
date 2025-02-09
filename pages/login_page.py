@@ -1268,3 +1268,33 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#guide_business (раздел Guide)
+    def get_click_guide_business_page(self):
+        self.get_click_guide_business()
+
+    def get_click_guide_business(self):
+        assert MainPageLocators.guide_business.is_displayed(), "The guide business page is present"
+
+    def test_current_url_guide_business(self):
+        try:
+            assert "https://openweather.co.uk/" in self.url == 'https://openweather.co.uk/'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#guide_logo (раздел Guide)
+    def get_click_guide_logo_page(self):
+        self.get_click_guide_logo()
+
+    def get_click_guide_logo(self):
+        assert MainPageLocators.guide_logo.is_displayed(), "The guide logo page is present"
+
+    def test_current_url_guide_logo(self):
+        try:
+            assert "https://openweathermap.org/" in self.url == 'https://openweathermap.org/'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")

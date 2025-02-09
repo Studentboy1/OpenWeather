@@ -90,3 +90,6 @@ class MainPageLocators():
     agro_dashboard = (By.XPATH,"//div[@class='text-container']//a[@href='https://home.agromonitoring.com/auth/sign-up']")
     weather_maps = (By.XPATH,"//div[@class='mobile-padding']//a[@href='/api/weather-map-2']")
     top_control = (By.XPATH,"//div[@id='topcontrol']//i[@class='fa fa-angle-up backtotop']")
+    guide_business = (By.XPATH,"//div[@class='col-sm-12']//a[@href='https://openweather.co.uk/']")
+    guide_logo = (By.XPATH,"//nav[@id='nav-website']//img[@src='/themes/openweathermap/assets/img/logo_white_cropped.png']")
+

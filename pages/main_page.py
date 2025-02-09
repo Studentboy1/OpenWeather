@@ -777,3 +777,20 @@ class MainPage(BasePage):
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
 
+    def go_to_guide_business(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        click_guide_business = self.browser.find_element(*MainPageLocators.guide_business)
+        click_guide_business.click()
+        time.sleep(2)
+        self.browser.switch_to.window(self.browser.window_handles[-1])
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_guide_logo(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        click_guide_logo = self.browser.find_element(*MainPageLocators.guide_logo)
+        click_guide_logo.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
