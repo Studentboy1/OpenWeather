@@ -1298,3 +1298,34 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#guide weather api (раздел Guide)
+    def get_click_guide_weather_api_page(self):
+        self.get_click_guide_weather_api()
+
+    def get_click_guide_weather_api(self):
+        assert MainPageLocators.guide_weather_api.is_displayed(), "The guide weather api page is present"
+
+    def test_current_url_guide_weather_api(self):
+        try:
+            assert "https://openweathermap.org/api" in self.url == 'https://openweathermap.org/api'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#guide road risk api (раздел Guide)
+    def get_click_guide_road_risk_api_page(self):
+        self.get_click_guide_road_risk_api()
+
+    def get_click_guide_road_risk_api(self):
+        assert MainPageLocators.guide_road_risk_api.is_displayed(), "The guide road risk api page is present"
+
+    def test_current_url_guide_road_risk_api(self):
+        try:
+            assert "https://openweathermap.org/api/road-risk" in self.url == 'https://openweathermap.org/api/road-risk'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+

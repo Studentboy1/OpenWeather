@@ -92,4 +92,7 @@ class MainPageLocators():
     top_control = (By.XPATH,"//div[@id='topcontrol']//i[@class='fa fa-angle-up backtotop']")
     guide_business = (By.XPATH,"//div[@class='col-sm-12']//a[@href='https://openweather.co.uk/']")
     guide_logo = (By.XPATH,"//nav[@id='nav-website']//img[@src='/themes/openweathermap/assets/img/logo_white_cropped.png']")
+    guide_weather_api = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/api']")
+    guide_road_risk_api = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/api/road-risk']")
+
 
