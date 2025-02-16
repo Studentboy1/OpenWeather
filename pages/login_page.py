@@ -1329,3 +1329,32 @@ class LoginPage(BasePage):
         else:
             print("URL соответствует ожидаемому")
 
+#guide_solar_irradiance_api
+    def get_click_guide_solar_irradiance_api_page(self):
+        self.get_click_guide_solar_irradiance_api()
+
+    def get_click_guide_solar_irradiance_api(self):
+        assert MainPageLocators.guide_solar_irradiance_api.is_displayed(), "The guide solar irradiance api page is present"
+
+    def test_current_url_guide_solar_irradiance_api(self):
+        try:
+            assert "https://openweathermap.org/api/solar-energy-prediction" in self.url == 'https://openweathermap.org/api/solar-energy-prediction'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#guide_solar_panel_energy_prediction
+    def get_click_guide_solar_panel_energy_prediction_page(self):
+        self.get_click_guide_solar_panel_energy_prediction()
+
+    def get_click_guide_solar_panel_energy_prediction(self):
+        assert MainPageLocators.guide_solar_panel_energy_prediction.is_displayed(), "The guide solar panel energy prediction page is present"
+
+    def test_current_url_guide_solar_panel_energy_prediction(self):
+        try:
+            assert "https://openweathermap.org/api/solar-panels-and-energy-prediction" in self.url == 'https://openweathermap.org/api/solar-panels-and-energy-prediction'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")

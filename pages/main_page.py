@@ -810,3 +810,19 @@ class MainPage(BasePage):
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
 
+    def go_to_guide_solar_irradiance_api(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        click_guide_solar_irradiance_api = self.browser.find_element(*MainPageLocators.guide_solar_irradiance_api)
+        click_guide_solar_irradiance_api.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_guide_solar_panel_energy_prediction(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        click_guide_solar_panel_energy_prediction = self.browser.find_element(*MainPageLocators.guide_solar_panel_energy_prediction)
+        click_guide_solar_panel_energy_prediction.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
+

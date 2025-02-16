@@ -94,5 +94,7 @@ class MainPageLocators():
     guide_logo = (By.XPATH,"//nav[@id='nav-website']//img[@src='/themes/openweathermap/assets/img/logo_white_cropped.png']")
     guide_weather_api = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/api']")
     guide_road_risk_api = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/api/road-risk']")
+    guide_solar_irradiance_api = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/api/solar-energy-prediction']")
+    guide_solar_panel_energy_prediction = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/api/solar-panels-and-energy-prediction']")
 
 
