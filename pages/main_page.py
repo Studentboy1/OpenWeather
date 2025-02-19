@@ -842,3 +842,12 @@ class MainPage(BasePage):
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
 
+    def go_to_guide_subscribe_one_call_api(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,400)")
+        time.sleep(2)
+        click_guide_subscribe_one_call_api = self.browser.find_element(*MainPageLocators.guide_subscribe_one_call_api)
+        click_guide_subscribe_one_call_api.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)

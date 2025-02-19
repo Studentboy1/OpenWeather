@@ -1388,3 +1388,18 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#guide_subscribe_one_call_api
+    def get_click_guide_subscribe_one_call_api_page(self):
+        self.get_click_guide_subscribe_one_call_api()
+
+    def get_click_guide_subscribe_one_call_api(self):
+        assert MainPageLocators.guide_subscribe_one_call_api.is_displayed(), "The guide subscribe one call api page is present"
+
+    def test_current_url_guide_subscribe_one_call_api(self):
+        try:
+            assert "https://openweathermap.org/price" in self.url == 'https://openweathermap.org/price'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")

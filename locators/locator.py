@@ -98,4 +98,5 @@ class MainPageLocators():
     guide_solar_panel_energy_prediction = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/api/solar-panels-and-energy-prediction']")
     guide_industry_standard_apis = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/api']")
     guide_one_call_api = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/api/one-call-3']")
+    guide_subscribe_one_call_api = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/price']")
 
