@@ -99,4 +99,5 @@ class MainPageLocators():
     guide_industry_standard_apis = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/api']")
     guide_one_call_api = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/api/one-call-3']")
     guide_subscribe_one_call_api = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/price']")
+    guide_current_state = (By.XPATH,"//div[@class='col-sm-12']//a[@href='/current']")
 

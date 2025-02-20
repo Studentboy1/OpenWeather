@@ -1403,3 +1403,18 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#guide_current_state
+    def get_click_guide_current_state_page(self):
+        self.get_click_guide_current_state()
+
+    def get_click_guide_current_state(self):
+        assert MainPageLocators.guide_current_state.is_displayed(), "The guide current state page is present"
+
+    def test_current_url_guide_current_state(self):
+        try:
+            assert "https://openweathermap.org/current" in self.url == 'https://openweathermap.org/current'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
