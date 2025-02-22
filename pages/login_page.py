@@ -1433,3 +1433,18 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#guide_forecast_sixteen_days
+    def get_click_guide_forecast_sixteen_days_page(self):
+        self.get_click_guide_forecast_sixteen_days()
+
+    def get_click_guide_forecast_sixteen_days(self):
+        assert MainPageLocators.guide_forecast_sixteen_days.is_displayed(), "The guide forecast sixteen days page is present"
+
+    def test_current_url_guide_forecast_sixteen_days(self):
+        try:
+            assert "https://openweathermap.org/forecast16" in self.url == 'https://openweathermap.org/forecast16'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
