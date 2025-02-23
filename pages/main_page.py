@@ -881,3 +881,13 @@ class MainPage(BasePage):
         click_guide_forecast_sixteen_days.click()
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_guide_forecast_thirty_days(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,900)")
+        time.sleep(2)
+        click_guide_forecast_thirty_days = self.browser.find_element(*MainPageLocators.guide_forecast_thirty_days)
+        click_guide_forecast_thirty_days.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
