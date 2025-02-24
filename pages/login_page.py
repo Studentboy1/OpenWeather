@@ -1463,3 +1463,18 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#guide_current_learn_more
+    def get_click_guide_current_learn_more_page(self):
+        self.get_click_guide_current_learn_more()
+
+    def get_click_guide_current_learn_more(self):
+        assert MainPageLocators.guide_current_learn_more.is_displayed(), "The guide current learn more page is present"
+
+    def test_current_url_guide_current_learn_more(self):
+        try:
+            assert "https://openweathermap.org/api#current" in self.url == 'https://openweathermap.org/api#current'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
