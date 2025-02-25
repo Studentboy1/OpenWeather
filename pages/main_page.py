@@ -901,3 +901,13 @@ class MainPage(BasePage):
         click_guide_current_learn_more.click()
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_guide_history_achive_46_years(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,1000)")
+        time.sleep(2)
+        click_guide_history_achive_46_years = self.browser.find_element(*MainPageLocators.guide_history_achive_46_years)
+        click_guide_history_achive_46_years.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)

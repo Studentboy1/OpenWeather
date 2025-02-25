@@ -1478,3 +1478,18 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#guide_history_achive_46_years
+    def get_click_guide_history_achive_46_years_page(self):
+        self.get_click_guide_history_achive_46_years()
+
+    def get_click_guide_history_achive_46_years(self):
+        assert MainPageLocators.guide_history_achive_46_years.is_displayed(), "The guide history achive 46 years page is present"
+
+    def test_current_url_guide_history_achive_46_years(self):
+        try:
+            assert "https://openweathermap.org/history-bulk" in self.url == 'https://openweathermap.org/history-bulk'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")

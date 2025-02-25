@@ -104,4 +104,5 @@ class MainPageLocators():
     guide_forecast_sixteen_days = (By.XPATH, "//div[@class='col-sm-12']//a[@href='/forecast16']")
     guide_forecast_thirty_days = (By.XPATH, "//div[@class='col-sm-12']//a[@href='/api/forecast30']")
     guide_current_learn_more = (By.XPATH, "//div[@class='col-sm-12']//a[@href='/api#current']")
+    guide_history_achive_46_years = (By.XPATH, "//div[@class='col-sm-12']//a[@href='/history-bulk']")
 
