@@ -1479,16 +1479,31 @@ class LoginPage(BasePage):
         else:
             print("URL соответствует ожидаемому")
 
-#guide_history_achive_46_years
-    def get_click_guide_history_achive_46_years_page(self):
-        self.get_click_guide_history_achive_46_years()
+#guide_history_archive_46_years
+    def get_click_guide_history_archive_46_years_page(self):
+        self.get_click_guide_history_archive_46_years()
 
-    def get_click_guide_history_achive_46_years(self):
-        assert MainPageLocators.guide_history_achive_46_years.is_displayed(), "The guide history achive 46 years page is present"
+    def get_click_guide_history_archive_46_years(self):
+        assert MainPageLocators.guide_history_archive_46_years.is_displayed(), "The guide history archive 46 years page is present"
 
-    def test_current_url_guide_history_achive_46_years(self):
+    def test_current_url_guide_history_archive_46_years(self):
         try:
             assert "https://openweathermap.org/history-bulk" in self.url == 'https://openweathermap.org/history-bulk'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
+
+#guide_history_forecast_archive
+    def get_click_guide_history_forecast_archive_page(self):
+        self.get_click_guide_history_forecast_archive()
+
+    def get_click_guide_history_forecast_archive(self):
+        assert MainPageLocators.guide_history_forecast_archive.is_displayed(), "The guide history forecast archive page is present"
+
+    def test_current_url_guide_history_forecast_archive(self):
+        try:
+            assert "https://openweathermap.org/api/history-forecast-bulk" in self.url == 'https://openweathermap.org/api/history-forecast-bulk'
         except AssertionError:
             print("URL не соответствует ожидаемому")
         else:
