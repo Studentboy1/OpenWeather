@@ -1523,3 +1523,18 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#guide_statistical_weather_api
+    def get_click_guide_statistical_weather_api_page(self):
+        self.get_click_guide_statistical_weather_api()
+
+    def get_click_guide_statistical_weather_api(self):
+        assert MainPageLocators.guide_statistical_weather_api.is_displayed(), "The guide statistical weather api page is present"
+
+    def test_current_url_guide_statistical_weather_api(self):
+        try:
+            assert "https://openweathermap.org/api/statistics-api" in self.url == 'https://openweathermap.org/api/statistics-api'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
