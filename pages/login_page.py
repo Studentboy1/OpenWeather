@@ -1568,3 +1568,18 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#guide_global_precipitation_maps
+    def get_click_guide_global_precipitation_maps_page(self):
+        self.guide_global_precipitation_maps()
+
+    def get_click_guide_global_precipitation_maps(self):
+        assert MainPageLocators.guide_global_precipitation_maps.is_displayed(), "The guide global precipitation maps page is present"
+
+    def test_current_url_guide_global_precipitation_maps(self):
+        try:
+            assert "https://openweathermap.org/api/global-precipitation-map" in self.url == 'https://openweathermap.org/api/global-precipitation-map'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
