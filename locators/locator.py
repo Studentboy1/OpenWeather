@@ -112,3 +112,4 @@ class MainPageLocators():
     guide_weather_map = (By.XPATH, "//div[@class='col-sm-12']//a[@href='/api/weather-map-2']")
     guide_global_precipitation_maps = (By.XPATH, "//div[@class='col-sm-12']//a[@href='/api/global-precipitation-map']")
     guide_relief_map = (By.XPATH, "//div[@class='col-sm-12']//a[@href='/api/relief']")
+    guide_weather_map_learn_more = (By.XPATH, "//div[@class='col-sm-12']//a[@href='/api#maps']")

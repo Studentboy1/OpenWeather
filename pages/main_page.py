@@ -980,3 +980,13 @@ class MainPage(BasePage):
         click_guide_relief_map.click()
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_guide_weather_map_learn_more(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,1500)")
+        time.sleep(2)
+        click_guide_weather_map_learn_more = self.browser.find_element(*MainPageLocators.guide_weather_map_learn_more)
+        click_guide_weather_map_learn_more.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
