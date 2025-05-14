@@ -1613,3 +1613,18 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#guide_air_quality
+    def get_click_guide_air_quality_page(self):
+        self.guide_air_quality()
+
+    def get_click_guide_air_quality(self):
+        assert MainPageLocators.guide_air_quality.is_displayed(), "The guide air quality page is present"
+
+    def test_current_url_guide_air_quality(self):
+        try:
+            assert "https://openweathermap.org/api/air-pollution" in self.url == 'https://openweathermap.org/api/air-pollution'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print("URL соответствует ожидаемому")
