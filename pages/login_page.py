@@ -1628,3 +1628,18 @@ class LoginPage(BasePage):
             print("URL не соответствует ожидаемому")
         else:
             print("URL соответствует ожидаемому")
+
+#guide_geocoding_api
+    def get_click_guide_geocoding_api(self):
+        self.guide_geocoding_api()
+
+    def get_click_guide_geocoding_api(self):
+        assert MainPageLocators.guide_geocoding_api.is_displayed(), "The guide geocoding api page is present"
+
+    def test_current_url_guide_geocoding_api(self):
+        try:
+            assert "https://openweathermap.org/api/geocoding-api" in self.url == 'https://openweathermap.org/api/geocoding-api'
+        except AssertionError:
+            print("URL не соответствует ожидаемому")
+        else:
+            print ("URL соответствует ожидаемому")
