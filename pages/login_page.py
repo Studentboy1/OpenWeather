@@ -1630,7 +1630,7 @@ class LoginPage(BasePage):
             print("URL соответствует ожидаемому")
 
 #guide_geocoding_api
-    def get_click_guide_geocoding_api(self):
+    def get_click_guide_geocoding_api_page(self):
         self.guide_geocoding_api()
 
     def get_click_guide_geocoding_api(self):
@@ -1641,5 +1641,20 @@ class LoginPage(BasePage):
             assert "https://openweathermap.org/api/geocoding-api" in self.url == 'https://openweathermap.org/api/geocoding-api'
         except AssertionError:
             print("URL не соответствует ожидаемому")
+        else:
+            print ("URL соответствует ожидаемому")
+
+#guide_learn_more_other_weather
+    def get_click_guide_learn_more_other_weather_page(self):
+        self.guide_learn_more_other_weather()
+
+    def get_click_guide_learn_more_other_weather(self):
+        assert MainPageLocators.guide_learn_more_other_weather.is_displayed(), "The guide learn more other weather page is present"
+
+    def test_current_url_guide_learn_more_other_weather(self):
+        try:
+            assert "https://openweathermap.org/api#other" in self.url == 'https://openweathermap.org/api#other'
+        except AssertionError:
+            print ("URL не соответствует ожидаемому")
         else:
             print ("URL соответствует ожидаемому")

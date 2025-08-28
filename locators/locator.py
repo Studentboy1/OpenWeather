@@ -115,3 +115,4 @@ class MainPageLocators():
     guide_weather_map_learn_more = (By.XPATH, "//div[@class='col-sm-12']//a[@href='/api#maps']")
     guide_air_quality = (By.XPATH, "//div[@class='col-sm-12']//a[@href='/api/air-pollution']")
     guide_geocoding_api = (By.XPATH, "//div[@class='col-sm-12']//a[@href='/api/geocoding-api']")
+    guide_learn_more_other_weather = (By.XPATH, "//div[@class='col-sm-12']//a[@href='/api#other']")

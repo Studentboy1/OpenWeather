@@ -1010,3 +1010,13 @@ class MainPage(BasePage):
         click_guide_geocoding_api.click()
         time.sleep(2)
         return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+    def go_to_learn_more_other_weather(self):
+        self.browser.maximize_window()
+        time.sleep(2)
+        self.browser.execute_script("window,scrollTo (0,1650)")
+        time.sleep(2)
+        click_guide_learn_more_other_weather = self.browser.find_element(*MainPageLocators.guide_learn_more_other_weather)
+        click_guide_learn_more_other_weather.click()
+        time.sleep(2)
+        return LoginPage(browser=self.browser, url=self.browser.current_url)
